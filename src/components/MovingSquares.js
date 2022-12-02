@@ -2,15 +2,15 @@ import { Color } from "p5";
 
 function MovingSquares(p){
     let r1, r2, r3, r4, r5;
-    let height = 200
+    let height = window.innerHeight /5
     let width = window.innerWidth -50
 
 
    p.setup = () => {
         p.createCanvas(width, height);
         p.fill(155, 104);
-        p.noStroke();
-        r1 = new MRect(5, 134.0, 0.532, 0.1 * height, 10.0, 20.0);
+        p.stroke(255)
+        r1 = new MRect(5, 134.0, 0.55, 0.1 * height, 10.0, 20.0);
         r2 = new MRect(2, 44.0, 0.166, 0.3 * height, 5.0, 100.0);
         r3 = new MRect(2, 58.0, 0.332, 0.4 * height, 10.0, 35.0);
         r4 = new MRect(1, 120.0, 0.0498, 0.9 * height, 15.0, 150.0);
@@ -23,25 +23,36 @@ function MovingSquares(p){
         // r4 = new MRect(1, 120.0, 0.0498, 0.9 * height, 15.0, 80.0);
         
         p.draw = () => {
-            p.background(0);
-            
+            p.background(230);
+            p.stroke(0)
             r1.display();
-            p.fill(300)
+            p.fill(0)
             r2.display();
             r3.display();
             r4.display();
             r5.display();
+
+        
             
-            r1.move(p.mouseX - p.width / 4, p.mouseY + height * 0.2, 30);
-            r2.move((p.mouseX + width * 0.1) % width, p.mouseY + height * 0.025, 20);
-            r3.move(p.mouseX / 2, p.mouseY - height * 0.025, 40);
-            r4.move(p.mouseX - p.width / 2, height - p.mouseY * 1.5, 50);
-            r5.move(p.mouseX - p.width / 3, height - p.mouseY * 2, 50);
+           
 
             // r1.move(p.mouseX - p.width / 2, p.mouseY + height * 0.2, 30);
             // r2.move((p.mouseX + width * 0.05) % width, p.mouseY + height * 0.025, 20);
             // r3.move(p.mouseX / 4, p.mouseY - height * 0.025, 40);
             // r4.move(p.mouseX - p.width / 2, height - p.mouseY, 50);
+
+            if ((p.mouseX < width ) && (p.mouseX > 0) &&
+        (p.mouseY > 0 ) && (p.mouseY < height)) {
+            r1.move(p.mouseX - p.width / 4, p.mouseY + height * 0.2, 30);
+            r2.move((p.mouseX + width * 0.1) % width, p.mouseY + height * 0.025, 20);
+            r3.move(p.mouseX / 2, p.mouseY - height * 0.025, 40);
+            r4.move(p.mouseX - p.width / 2, height - p.mouseY * 1.25, 50);
+            r5.move(p.mouseX - p.width / 3, height - p.mouseY * 1.5, 50);
+        }
+        // else{
+            
+        // }
+
             }
             
             class MRect {
