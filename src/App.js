@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { useEffect } from 'react';
 import { ReactP5Wrapper } from 'react-p5-wrapper';
@@ -9,7 +9,7 @@ import AnimationTennis from './components/AnimationTennis';
 import AnimationBurger from './components/AnimationBurger';
 import AnimationDog from './components/AnimationDog';
 import AnimationGame from './components/AnimationGame';
-import Arrow from './components/Arrow';
+
 import BouncingBalls from "./components/BouncingBalls"
 
 function App() {
