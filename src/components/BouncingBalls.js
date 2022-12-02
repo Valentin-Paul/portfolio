@@ -40,7 +40,7 @@ function BouncingBalls(p) {
       balls[i] = new Ball(
         p.random(250, 550),
         p.random(0, 200),
-        p.random(100, 120),
+        p.random(130, 170),
         i,
         balls
       );
@@ -146,7 +146,7 @@ function BouncingBalls(p) {
                 p.mouseY > this.y - this.diameter * p.sin(0.5) &&
                 p.mouseY < this.y + this.diameter * p.sin(0.5) 
               ) {
-                p.textSize(30);
+                p.textSize(35);
                 p.textFont("Deacon Blues Super-Italic");
                 if(z === 0){
                     p.text("Home", this.x - this.diameter * p.sin(0.5), this.y);
