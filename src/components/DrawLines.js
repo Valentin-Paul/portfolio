@@ -1,37 +1,78 @@
-function sketch(p){
+function sketch(p) {
+  let width = window.innerWidth - 50;
+  let height = window.innerHeight / 4;
+
+  let drawThings = false;
+  let topLayer;
+
+  p.setup = function () {
+    p.createCanvas(width, height);
+    topLayer = p.createGraphics(width, height);
+    topLayer.background(0);
+    topLayer.textSize(50);
+    topLayer.textAlign(p.CENTER);
+    topLayer.strokeWeight(40);
+    topLayer.blendMode(p.REMOVE);
+
+    // p.background(230)
+    p.frameRate(10)
+  };
+
+  p.draw = function () {
+    p.background(0);
+    p.fill(250)
+    p.text("Contact", width / 2, height / 2);
+    p.textSize(60);
+    p.textAlign(p.CENTER, p.CENTER);
+    p.textFont("Deacon Blues Super-Italic");
+    p.stroke(0);
+
     
-    let width = window.innerWidth - 50;
-    let height = (window.innerHeight / 5)
+    topLayer.rect(p.random(width), 0, 12, height);
 
-    let drawThings
+    // if (p.mouseIsPressed) {
+    //   topLayer.line(p.pmouseX, p.pmouseY, p.mouseX, p.mouseY);
+    // }
 
-    p.setup = function (){
-        p.createCanvas(width, height)
-        p.background(255, 255, 255)
-        p.frameRate(200)
+    if (drawThings) {
+      p.image(topLayer, 0, 0);
+      p.fill(250);
+      p.noStroke();
+      p.rect(p.random(width), 0, 2, height);
+      // p.fill(230)
+      // p.rect(p.mouseX , p.mouseY - height * 5 , width / 100 , height * 10)
+    } else if (drawThings === false) {
+      p.textSize(25);
+      p.background(230);
+      p.fill(0);
+      p.stroke(0);
+
+      p.line(0, height / 2.75, width, height / 2.75);
+      p.line(0, (height / 2.75) * 2, width, (height / 2.75) * 2);
+      p.line(width / 8.8, 0, width / 8.8, height);
+      p.line((width / 8.8) * 2, 0, (width / 8.8) * 2, height);
+      p.line((width / 8.8) * 3, 0, (width / 8.8) * 3, height);
+      p.line((width / 8.8) * 4, 0, (width / 8.8) * 4, height);
+      p.line((width / 8.8) * 5, 0, (width / 8.8) * 5, height);
+      p.line((width / 8.8) * 6, 0, (width / 8.8) * 6, height);
+      p.line((width / 8.8) * 7, 0, (width / 8.8) * 7, height);
+      p.line((width / 8.8) * 8, 0, (width / 8.8) * 8, height);
+
+      p.text("click me", p.mouseX, p.mouseY);
+    }
+  };
+
+  
+      p.mousePressed = () => {
+        if ((p.mouseX < width ) && (p.mouseX > 0) &&
+    (p.mouseY > 0 ) && (p.mouseY < height)) {
+      drawThings = !drawThings;
+      p.background(250);
+    }
+       
+      };
     }
 
-    p.draw = function (){
 
-        if (drawThings) {
-        p.fill(0, 0, 0)
-        p.noStroke()
-        p.rect(p.random(width), 0, 5, height)
-        p.fill(255, 255, 255)
-        p.rect(p.mouseX , p.mouseY - height * 5 , width / 20 , height * 10)
-          }
-          else{
-            p.textSize(30)
-            p.background(255);
-            p.fill(0);
-            p.text("click me", p.mouseX, p.mouseY)
-          }
-    }; 
 
-    p.mousePressed = () => {
-        drawThings = !drawThings;
-        p.background(255);
-      }
-};
-
-export default sketch
+export default sketch;
