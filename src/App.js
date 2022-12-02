@@ -1,8 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
 import { useEffect } from 'react';
-import LocomotiveScroll from 'locomotive-scroll';
-import "./components/scroll.css"
 import { ReactP5Wrapper } from 'react-p5-wrapper';
 import sketch from "./components/DrawLines"
 import randomLines from './components/RandomLines';
