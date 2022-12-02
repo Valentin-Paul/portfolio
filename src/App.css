@@ -6,33 +6,97 @@
   font-family: 'Deacon Blues Super-Italic', sans-serif;
 }
 
-h2{
+p{
   font-family: 'Fox on the Run', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+}
+
+h2{
+  font-size: 2.8rem;
 }
 .header{
-  height: 20vh;
-  padding-top: 5vh;
-  padding-bottom: 10vh;
+  height: 14vh;
+  padding-top: 1vh;
+  padding-bottom: 8vh;
 }
 
 
 .two{
   font-family: 'Deacon Blues Super-Italic', sans-serif;
   position:relative;
-  margin-bottom: -20vh;
+  margin-bottom: -15vh;
   height: 100%;
   width: 100%;
-  height: 100%;
   color: white;
   font-size: 12vh;
 }
 
 .circle-drawing{
-  padding-bottom: 20vh;
+  padding: 10vh 0vw;
   font-family: 'Deacon Blues Super-Italic', sans-serif;
 }
 
+.animations{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  
+}
 
+.animations h3 {
+  font-size: 1.25rem;
+  color: white;
+}
+
+.animations a{
+  text-decoration: none;
+}
+
+.contact{
+  padding-bottom: 5vh;
+}
+
+#home{
+  height: 100vh;
+}
+
+#contact{
+  height: 100vh;
+}
+
+.description p{
+  font-size: 1.5rem;
+  padding: 0;
+}
+
+.projects{
+  height: 100vh;
+}
+
+#projects-header{
+  padding-top: 12vh;
+  font-size: 12vh;
+}
+
+#bouncing-balls{
+  color: white;
+  font-family: 'Deacon Blues Super-Italic', sans-serif;
+}
+
+.show-link{
+  display: block;
+  color: white;
+}
+js w
+a{
+  display: none;
+}
+
+/* .moving-squares{
+  border-top: solid white 0.5px;
+  border-bottom: solid white 0.5px
+} */
 
 
 
