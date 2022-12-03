@@ -1,6 +1,6 @@
 
 import './App.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { ReactP5Wrapper } from 'react-p5-wrapper';
 import sketch from "./components/DrawLines"
 import randomLines from './components/RandomLines';
@@ -9,10 +9,27 @@ import AnimationTennis from './components/AnimationTennis';
 import AnimationBurger from './components/AnimationBurger';
 import AnimationDog from './components/AnimationDog';
 import AnimationGame from './components/AnimationGame';
-
 import BouncingBalls from "./components/BouncingBalls"
+import Loading from "react-fullscreen-loading";
+
 
 function App() {
+
+  const [loading, setLoading] = useState(true)
+
+
+  const changeLoading = () =>{
+    setLoading(false)
+  }
+
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      changeLoading()
+    }, 800);
+    return () => clearTimeout(timer);
+  }, []);
+
 
   // useEffect(()=>{
 
@@ -54,7 +71,7 @@ function App() {
   return (
     <div className="App" data-scroll-container>
       <header className="App-header">
-
+      {loading === true? <Loading loading={true} background="black" loaderColor="white" /> : null}
       <div id="home" data-scroll data-scroll-speed="2">
       <div className="header">
           <h1 className="two">Valentin Paul</h1>
@@ -94,7 +111,7 @@ function App() {
             <div className="burger">
               <h3>Schluckreflex</h3>
                <p>Foodblog</p>
-              <ReactP5Wrapper sketch={AnimationBurger} />
+              <ReactP5Wrapper sketch={AnimationBurger} loading={changeLoading}/>
              
             </div>
           </a>
