@@ -76,7 +76,7 @@ h2{
 }
 
 .description p{
-  font-size: 1.5rem;
+  font-size: 4vh;
   padding: 0;
 }
 
@@ -126,3 +126,33 @@ a{
   color: white;
 } */
 
+
+@media screen and (max-width: 768px) {
+
+ 
+
+  .two{
+    font-family: 'Deacon Blues Super-Italic', sans-serif;
+    position:relative;
+    margin-bottom: -15vh;
+
+    color: white;
+    font-size: 7vh
+  }
+
+  .animations{
+    flex-direction: column;
+  }
+
+  .projects{
+    height: auto;
+  }
+   /* .burger .animations .tennis .dog {
+   width: 50vw
+  } */
+
+  #bouncing-balls{
+   width: 10vw;
+  }
+
+}
