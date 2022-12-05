@@ -98,7 +98,7 @@ function App() {
         <div className="projects" id="projects" data-scroll data-scroll-speed="2">
         <h2 id='projects-header'>Projects</h2>
         <div className="animations">
-          <a href="https://schluckreflex.netlify.app">
+          <a href="https://valentin-paul.github.io/Game-Javascript/">
             <div className="game">
               <h3>Sticky Bullet</h3>
               <p>Pure Javascript Game</p>
