@@ -11,6 +11,8 @@ import AnimationDog from './components/AnimationDog';
 import AnimationGame from './components/AnimationGame';
 import BouncingBalls from "./components/BouncingBalls"
 import Loading from "react-fullscreen-loading";
+import linkedIn from "./components/linkedin.png";
+import github from "./components/github-8-128.png"
 
 
 function App() {
@@ -98,7 +100,7 @@ function App() {
         <div className="projects" id="projects" data-scroll data-scroll-speed="2">
         <h2 id='projects-header'>Projects</h2>
         <div className="animations">
-          <a href="https://valentin-paul.github.io/Game-Javascript/">
+          <a href="https://valentin-paul.github.io/Game-Javascript/" target="_blank">
             <div className="game">
               <h3>Sticky Bullet</h3>
               <p>Pure Javascript Game</p>
@@ -107,7 +109,7 @@ function App() {
             </div>
           </a>
 
-          <a href="https://schluckreflex.netlify.app">
+          <a href="https://schluckreflex.netlify.app" target="_blank">
             <div className="burger">
               <h3>Schluckreflex</h3>
                <p>Foodblog</p>
@@ -116,7 +118,7 @@ function App() {
             </div>
           </a>
 
-          <a href="https://tcamlangensteg.netlify.app/">
+          <a href="https://tcamlangensteg.netlify.app/" target="_blank">
             <div className="tennis">
               <h3>Tennis Club Am Langen Steg</h3>
               <p>Website for Tennsis Club</p>
@@ -125,7 +127,7 @@ function App() {
             </div>
           </a>
 
-          <a href="https://puppies-palace.netlify.app">
+          <a href="https://puppies-palace.netlify.app" target="_blank">
             <div className="dog">
               <h3>Puppies Palace</h3>
               <p>Website for Dog School</p>
@@ -145,8 +147,10 @@ function App() {
           <h3>Valentin Paul</h3>
           <p>Mobil: +49151/53798985</p>
           <p>Mail: valentin@vamptech.de</p>
-          <p>Github: www.github.com/Valentin-Paul</p>
-          <p>LinkedIn: www.linkedin.com/in/valentin-paul1/</p>
+          <div className='icons'>
+          <a href='https://www.linkedin.com/in/valentin-paul1/'target="_blank" className='icon'><img src={linkedIn}></img></a>
+          <a href='https://github.com/Valentin-Paul' target="_blank" className='icon'><img src={github}></img></a>
+          </div>
         </div>
         </div>
 
