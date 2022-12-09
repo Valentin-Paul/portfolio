@@ -1,8 +1,8 @@
 function randomLines(p){
     let num = 2000;
     let range = 50;
-    let width = window.innerWidth/ 1.5;
-    let height = window.innerHeight / 8
+    let width = window.innerWidth/ 1.4;
+    let height = window.innerHeight / 7
     
     let ax = [];
     let ay = [];
