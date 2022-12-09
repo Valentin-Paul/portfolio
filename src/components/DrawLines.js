@@ -1,5 +1,5 @@
 function sketch(p) {
-  let width = window.innerWidth - 50;
+  let width = window.innerWidth / 1.1;
   let height = window.innerHeight / 4;
 
   let drawThings = false;
@@ -19,6 +19,7 @@ function sketch(p) {
   };
 
   p.draw = function () {
+    p.cursor(p.HAND)
     p.background(0);
     p.fill(250)
     p.text("Contact", width / 2, height / 2);
@@ -65,7 +66,7 @@ function sketch(p) {
   
       p.mousePressed = () => {
         if ((p.mouseX < width ) && (p.mouseX > 0) &&
-    (p.mouseY > 0 ) && (p.mouseY < height)) {
+    (p.mouseY > 0 ) && (p.mouseY < height) && drawThings === false) {
       drawThings = !drawThings;
       p.background(250);
     }
