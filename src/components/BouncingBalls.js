@@ -1,19 +1,16 @@
 
 
-
-
 function BouncingBalls(p) {
 
   let numBalls = 3;
   let spring = 0.05;
-  let gravity = 0.1;
+  let gravity = 0.2;
   let friction = -0.9;
   let balls = [];
   let height = window.innerHeight / 2;
-  let width = window.innerWidth - 50;
+  let width = window.innerWidth /1.1;
   let hash = "";
-  let cnv;
-  let lock = false;
+ 
 
   let clicking = (t, event) => {
     if (p.mouseX < width && p.mouseX > 0 && p.mouseY > 0 && p.mouseY < height ) {
@@ -23,16 +20,9 @@ function BouncingBalls(p) {
     } 
     else{
         p.mousePressed = () => {
-           
           };
     }
   };
-
-  
-
-// const press = p.mouseClicked = (hash) => {
-//     window.location.href = hash;
-// }
 
   p.setup = () => {
     p.createCanvas(width, height);
@@ -52,15 +42,14 @@ function BouncingBalls(p) {
 
   p.draw = () => {
     console.log(hash)
+    p.cursor(p.ARROW)
     p.background(0);
     balls.forEach((ball, index) => {
       ball.collide();
       ball.move();
       ball.display(index);
     });
-   
-    // console.log(lock);
-    // console.log("hash is", hash);
+  
   };
 
   class Ball {
@@ -139,40 +128,38 @@ function BouncingBalls(p) {
     }
 
     display(z) {
-       
+      
             if (
                 p.mouseX < this.x + this.diameter * p.cos(1) &&
                 p.mouseX > this.x - this.diameter * p.cos(1) &&
                 p.mouseY > this.y - this.diameter * p.sin(0.5) &&
                 p.mouseY < this.y + this.diameter * p.sin(0.5) 
               ) {
+                p.cursor(p.HAND)
                 p.textSize(35);
                 p.textFont("Deacon Blues Super-Italic");
                 if(z === 0){
                     p.text("Home", this.x - this.diameter * p.sin(0.5), this.y);
-                    return hash = "#home";
+                     hash = "#home";
                 }
                 else if(z === 1){
+                  
                     p.text("Projects", this.x - this.diameter * p.sin(0.5), this.y);
-                    return hash = "#projects";
+                    hash = "#projects";
                 }
 
                 else if(z === 2){
-                    p.text("Contact", this.x - this.diameter * p.sin(0.5), this.y);             
-                    return hash = "#contact";
-                }
-                else{
-                    return hash = "#"
+                    p.text("Contact", this.x - this.diameter * p.sin(0.5), this.y);      
+                     hash = "#contact";
                 }
 
-                
-                 
-              }
-              
+                else{
+                 hash = "#"
+                    
+                } 
+              }              
                                   
-                else {
-                   
-                       
+                else {                   
                         p.fill(250);
                         p.ellipse(this.x, this.y, this.diameter, this.diameter);
                       }
