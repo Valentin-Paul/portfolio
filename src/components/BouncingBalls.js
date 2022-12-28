@@ -30,7 +30,7 @@ function BouncingBalls(p) {
     p.createCanvas(width, height);
     for (let i = 0; i < numBalls; i++) {
       balls[i] = new Ball(
-        p.random(250, 550),
+        p.random(window.innerWidth/3, window.innerWidth/1.5),
         p.random(0, 200),
         ballSize,
         i,
