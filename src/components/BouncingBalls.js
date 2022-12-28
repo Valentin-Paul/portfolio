@@ -8,9 +8,11 @@ function BouncingBalls(p) {
   let friction = -0.9;
   let balls = [];
   let height = window.innerHeight / 2;
-  let width = window.innerWidth /1.1;
+  let width = window.innerWidth /1.2;
   let hash = "";
+  let ballSize = (window.innerWidth > window.innerHeight ? window.innerWidth/8.5 : window.innerHeight/7.5)
  
+  console.log(ballSize)
 
   let clicking = (t, event) => {
     if (p.mouseX < width && p.mouseX > 0 && p.mouseY > 0 && p.mouseY < height ) {
@@ -30,7 +32,7 @@ function BouncingBalls(p) {
       balls[i] = new Ball(
         p.random(250, 550),
         p.random(0, 200),
-        p.random(130, 170),
+        ballSize,
         i,
         balls
       );
