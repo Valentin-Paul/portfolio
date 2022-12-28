@@ -173,4 +173,7 @@ a{
     font-size: 8vh;
   }
 
+  .description p{
+    font-size: 3.5vh;
+  }
 }
