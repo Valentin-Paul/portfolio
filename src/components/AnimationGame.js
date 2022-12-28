@@ -2,7 +2,7 @@ import gameboy from "./gameboy2.obj"
 
 function AnimationGame(p){
 
-    let width = window.innerWidth / 4.1
+let width = (window.innerWidth > window.innerHeight ? window.innerWidth/4.1 : window.innerWidth/1.5)
 let ani;
 let rot = 0
 let scaleNum
