@@ -169,4 +169,8 @@ a{
    width: 10vw;
   }
 
+  #projects-header{
+    font-size: 8vh;
+  }
+
 }
