@@ -1,7 +1,6 @@
 function sketch(p) {
   let width = window.innerWidth / 1.1;
   let height = window.innerHeight / 4;
-
   let drawThings = false;
   let topLayer;
 
@@ -13,6 +12,7 @@ function sketch(p) {
     topLayer.textAlign(p.CENTER);
     topLayer.strokeWeight(40);
     topLayer.blendMode(p.REMOVE);
+ 
 
     // p.background(230)
     p.frameRate(10)
@@ -58,8 +58,10 @@ function sketch(p) {
       p.line((width / 8.8) * 6, 0, (width / 8.8) * 6, height);
       p.line((width / 8.8) * 7, 0, (width / 8.8) * 7, height);
       p.line((width / 8.8) * 8, 0, (width / 8.8) * 8, height);
-
-      p.text("click me", p.mouseX, p.mouseY);
+      window.innerWidth > window.innerHeight ?
+        p.text("click me", p.mouseX, p.mouseY ) :
+        p.text("click me", width/2, height/2 )
+      
     }
   };
 
