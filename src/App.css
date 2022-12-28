@@ -141,7 +141,9 @@ a{
 
 @media screen and (max-width: 768px) {
 
- 
+ .App{
+  max-width: 100vw;
+ }
 
   .two{
     font-family: 'Deacon Blues Super-Italic', sans-serif;
