@@ -100,10 +100,10 @@ function App() {
         <div className="projects" id="projects" data-scroll data-scroll-speed="2">
         <h2 id='projects-header'>Projects</h2>
         <div className="animations">
-          <a href="https://valentin-paul.github.io/Game-Javascript/" target="_blank">
+          <a href="https://nims-network.netlify.app/" target="_blank">
             <div className="game">
-              <h3>Sticky Bullet</h3>
-              <p>Pure Javascript Game</p>
+              <h3>NIMS (in progress...)</h3>
+              <p>Website for Student Network</p>
               <ReactP5Wrapper sketch={AnimationGame} />
              
             </div>
