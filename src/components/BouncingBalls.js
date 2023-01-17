@@ -10,7 +10,7 @@ function BouncingBalls(p) {
   let height = window.innerHeight / 2;
   let width = window.innerWidth /1.2;
   let hash = "";
-  let ballSize = (window.innerWidth > window.innerHeight ? window.innerWidth/8.5 : window.innerHeight/7.5)
+  let ballSize = (window.innerWidth > window.innerHeight ? window.innerWidth/9.5 : window.innerHeight/7.5)
  
   console.log(ballSize)
 
