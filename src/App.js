@@ -100,12 +100,11 @@ function App() {
         <div className="projects" id="projects" data-scroll data-scroll-speed="2">
         <h2 id='projects-header'>Projects</h2>
         <div className="animations">
-          <a href="https://nims-network.netlify.app/" target="_blank">
+          <a href="https://nims-global.eu/" target="_blank">
             <div className="game">
               <h3>NIMS (in progress...)</h3>
               <p>Website for Student Network</p>
               <ReactP5Wrapper sketch={AnimationGame} />
-             
             </div>
           </a>
 
@@ -114,11 +113,10 @@ function App() {
               <h3>Schluckreflex</h3>
                <p>Foodblog</p>
               <ReactP5Wrapper sketch={AnimationBurger} loading={changeLoading}/>
-             
             </div>
           </a>
 
-          <a href="https://tcamlangensteg.netlify.app/" target="_blank">
+          <a href="https://tcamlangensteg.de" target="_blank">
             <div className="tennis">
               <h3>Tennis Club Am Langen Steg</h3>
               <p>Website for Tennsis Club</p>
